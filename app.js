@@ -14,7 +14,7 @@ const helmet = require("helmet");
 const app = express();
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
-const mongoDB = process.env.MONGODB_URI || dev_db_url;
+const mongoDB = process.env.MONGODB_URI;
 
 const RateLimit = require("express-rate-limit");
 const limiter = RateLimit({
